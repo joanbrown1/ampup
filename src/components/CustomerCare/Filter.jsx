@@ -31,7 +31,7 @@ const Filter = () => {
             "date": date
         });
         
-        let response = await fetch("https://ampupserver.onrender.com/transactions/date", { 
+        let response = await fetch("https://api.powerkiosk.ng/api/transactions/date", { 
             method: "POST",
             body: bodyContent,
             headers: {

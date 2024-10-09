@@ -43,7 +43,7 @@ const ChangeAdminPassword = () => {
         "password": formData.password
       });
   
-      let response = await fetch("https://ampupserver.onrender.com/update/admin", {
+      let response = await fetch("https://api.powerkiosk.ng/api/update/admin", {
         method: "PUT",
         body: bodyContent,
         headers: {
@@ -78,7 +78,7 @@ const ChangeAdminPassword = () => {
           <Side/>
       </div>
       <div className='lg:col-span-10'>
-          <div className="sm:block hidden bg-[#F3F3F3] pt-10 w-full h-full pb-10">
+          <div className="sm:block hidden bg-[#F3F3F3] pt-10 w-full h-screen pb-10">
           <div className=' ml-6'>
           <p className='ml-[350px] font-medium text-xl'>Change Password</p>
             <div className='ml-[280px]'>

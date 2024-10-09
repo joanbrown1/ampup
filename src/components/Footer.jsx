@@ -45,7 +45,7 @@ const Footer = () => {
                     <a href='https://powerkiosk.ng/privacypolicy' className='font-light '>Privacy Policy</a>
                 </div>
                 <div className="flex mt-1">
-                    <a href='https://powerkiosk.ng/returnpolicy' className='font-light '>Refurn Policy</a>
+                    <a href='https://powerkiosk.ng/returnpolicy' className='font-light '>Refund Policy</a>
                 </div>
                 
             </div>

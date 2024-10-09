@@ -49,7 +49,7 @@ const ChangeMeter = () => {
         "meternumber": formData.meternumber
       });
   
-      let response = await fetch("https://ampupserver.onrender.com/updatemeter", {
+      let response = await fetch("https://api.powerkiosk.ng/api/updatemeter", {
         method: "PUT",
         body: bodyContent,
         headers: {

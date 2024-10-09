@@ -33,7 +33,7 @@ const RequestBill = () => {
              "email":userData.email
            });
            
-           let response = await fetch("https://ampupserver.onrender.com/transactions/email", { 
+           let response = await fetch("https://api.powerkiosk.ng/api/transactions/email", { 
              method: "POST",
              body: bodyContent,
              headers: {

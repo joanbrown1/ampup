@@ -44,7 +44,7 @@ const Discount = () => {
     const getDiscounts = async () => {
         setMessage("Loading");
         try {
-            let response = await fetch("https://ampupserver.onrender.com/discounts", {
+            let response = await fetch("https://api.powerkiosk.ng/api/discounts", {
                 method: "GET",
                 headers: {
                     "Accept": "*/*"
@@ -75,7 +75,7 @@ const Discount = () => {
                 "amount": formData.amount,
                 "limit": formData.limit.toISOString().substr(0, 10) // Convert date to ISO string
             });
-            let response = await fetch("https://ampupserver.onrender.com/discount", {
+            let response = await fetch("https://api.powerkiosk.ng/api/discount", {
                 method: "POST",
                 body: bodyContent,
                 headers: {

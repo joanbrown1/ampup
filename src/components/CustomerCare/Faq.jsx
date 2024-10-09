@@ -35,7 +35,7 @@ const Faq = () => {
     
         try {
            
-           let response = await fetch("https://ampupserver.onrender.com/faqs", { 
+           let response = await fetch("https://api.powerkiosk.ng/api/faqs", { 
              method: "GET",
              headers: {
                 "Accept": "*/*"
@@ -77,7 +77,7 @@ const Faq = () => {
              "answer": formData.answer
            });
            
-           let response = await fetch("https://ampupserver.onrender.com/faq", { 
+           let response = await fetch("https://api.powerkiosk.ng/api/faq", { 
              method: "POST",
              body: bodyContent,
              headers: {

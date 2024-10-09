@@ -1,9 +1,0 @@
-.footer {
-    background-color: #7B0323;
-}
-
-.horizontal-scroll {
-    overflow-x: auto;
-    white-space: nowrap;
-    scroll-behavior: smooth; /* Smooth scrolling behavior */
-  }

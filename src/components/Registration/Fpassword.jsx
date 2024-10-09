@@ -20,7 +20,7 @@ const Fpassword = () => {
             "email": email
           });
       
-          let response = await fetch("https://ampupserver.onrender.com/password", {
+          let response = await fetch("https://api.powerkiosk.ng/api/password", {
             method: "POST",
             body: bodyContent,
             headers: {

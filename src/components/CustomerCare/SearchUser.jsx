@@ -30,7 +30,7 @@ const SearchUser = () => {
         
             try {
                
-               let response = await fetch("https://ampupserver.onrender.com/users", { 
+               let response = await fetch("https://api.powerkiosk.ng/api/users", { 
                  method: "GET",
                  headers: {
                     "Accept": "*/*"
@@ -172,7 +172,7 @@ const SearchUser = () => {
                             ))}
                         </div>
                         </div>
-                        <a href='https://ampupserver.onrender.com/download/users'>
+                        <a href='https://api.powerkiosk.ng/api/download/users'>
                             <button className='bg-[#7B0323] w-[400px] h-[60px] mt-12 hover:bg-white hover:text-black p-2 border-[#7B0323] border-2 rounded-lg text-white text-lg'>
                             Download All Users Details
                             </button>

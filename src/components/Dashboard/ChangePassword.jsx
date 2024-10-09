@@ -48,7 +48,7 @@ const ChangePassword = () => {
         "password": formData.password
       });
   
-      let response = await fetch("https://ampupserver.onrender.com/update/user", {
+      let response = await fetch("https://api.powerkiosk.ng/api/update/user", {
         method: "PUT",
         body: bodyContent,
         headers: {

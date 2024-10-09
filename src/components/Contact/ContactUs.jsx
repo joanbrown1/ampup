@@ -32,7 +32,7 @@ const ContactUs = () => {
                 "message": formData.message
             });
     
-            let response = await fetch("https://ampupserver.onrender.com/support", {
+            let response = await fetch("https://api.powerkiosk.ng/api/support", {
                 method: "POST",
                 body: bodyContent,
                 headers: {
