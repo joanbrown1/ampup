@@ -531,50 +531,46 @@ const BuyPower = () => {
     };
     
     const checkDiscount = async (e) => {
-        e.preventDefault();
+        e.preventDefault
+
+        setSearch("Loading")
     
-        setSearch("Loading");
     
         try {
-            let bodyContent = JSON.stringify({
-                code: discountCode
-            });
-    
-            let res = await fetch("https://api.powerkiosk.ng/api/discounts/code", {
-                method: "POST",
-                body: bodyContent,
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            });
-    
-            let data = await res.json();
-            console.log(data);
-    
+           
+           let bodyContent = JSON.stringify({
+             "code": discountCode
+           });
+
+            let res = await fetch("https://api.powerkiosk.ng/api/discounts/code", { 
+             method: "POST",
+             body: bodyContent,
+             headers: {
+              "Content-Type": "application/json"
+             }
+           });
+           
+           let data = await res.json();
+           console.log(data);
+
+            // Check if the status is 200
             if (res.ok) {
-                const discount = data[0];
-                const limitDate = new Date(discount.limit);
-                const currentDate = new Date();
-    
-                if (limitDate >= currentDate) {
-                    // Save the discount if it has not expired
-                    setDiscount(discount);
-                    console.log(discount.amount);
-                    setSearch(""); // Clear the search status
-                } else {
-                    // Display an expiration message if the discount has expired
-                    setSearch("This promo has ended.");
-                }
+                setDiscount(data[0]);
+                console.log(data[0].amount)
+
             } else {
                 console.log("Error:", res.status);
-                setSearch("An error occurred: " + res.status);
+                setSearch(res.status)
+                // Handle error condition accordingly
             }
+           
+           setSearch("")
+         
         } catch (error) {
-            console.error('Error:', error);
-            setSearch("An error occurred: " + error.message);
+          console.error('Error:', error);
+          setSearch(error);
         }
     };
-    
 
     
     const saveTransaction  = async (powerdata)=>{
@@ -973,7 +969,7 @@ const BuyPower = () => {
                                     <option value="">Select Location</option>
                                     {activeDiscos.map(disco => (
                                         <option key={disco.id} value={disco.vtname}>
-                                            {disco.name}
+                                            {disco.vtname}
                                         </option>
                                     ))}
                                 </select>
@@ -1248,7 +1244,7 @@ const BuyPower = () => {
                                 >
                                     <option value="">Select Location</option>
                                     {activeDiscos.map(disco => (
-                                        <option key={disco.id} value={disco.vtname}>
+                                        <option key={disco.id} value={disco.name}>
                                             {disco.name}
                                         </option>
                                     ))}
